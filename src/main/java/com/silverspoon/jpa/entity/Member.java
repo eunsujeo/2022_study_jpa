@@ -1,4 +1,4 @@
-package com.silverspoon.jpa.chapter2;
+package com.silverspoon.jpa.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,6 +10,14 @@ public class Member {
 	@Id
 	private Long id;
 	private String name;
+
+	public Member() {
+	}
+
+	public Member(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 	public Long getId() {
 		return id;

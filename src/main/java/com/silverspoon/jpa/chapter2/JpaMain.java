@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import com.silverspoon.jpa.entity.Member;
+
 public class JpaMain {
 
 	public static void main(String[] args) {
