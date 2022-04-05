@@ -3,19 +3,17 @@ package com.silverspoon.jpa.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
-public class Member {
+public class Product {
 
 	@Id
 	private Long id;
 	private String name;
-	private Integer age;
 
-	public Member() {
+	public Product() {
 	}
 
-	public Member(Long id, String name) {
+	public Product(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -34,13 +32,5 @@ public class Member {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
 	}
 }
