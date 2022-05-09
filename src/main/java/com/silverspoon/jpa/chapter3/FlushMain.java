@@ -1,15 +1,11 @@
 package com.silverspoon.jpa.chapter3;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
 
-import com.silverspoon.jpa.entity.Member;
-import com.silverspoon.jpa.entity.Product;
+import com.silverspoon.jpa.chapter3.entity.Member;
 
 public class FlushMain {
 

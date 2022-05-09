@@ -1,4 +1,4 @@
-package com.silverspoon.jpa.chapter3;
+package com.silverspoon.jpa.chapter6.entity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -7,9 +7,14 @@ import javax.persistence.Persistence;
 
 import com.silverspoon.jpa.chapter3.entity.Member;
 
-public class DetachedMain {
+public class OneToManyMain {
 
 	public static void main(String[] args) {
+		testSave();
+	}
+
+	public static void testSave() {
+
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
 
 		EntityManager em = emf.createEntityManager();
@@ -19,18 +24,16 @@ public class DetachedMain {
 
 		try {
 
-			//영속
-			Member findMember = em.find(Member.class, 304L);
-			findMember.setName("이름바꿔");
+			Member_Chapter_3 member = new Member_Chapter_3("member1");
+			Member_Chapter_3 member2 = new Member_Chapter_3("member2");
 
-			System.out.println("em contains member = " + em.contains(findMember));
+			Team_Chapter_3 team = new Team_Chapter_3("team1");
+			team.getMembers().add(member);
+			team.getMembers().add(member2);
 
-			// 준영속
-			em.detach(findMember);
-			System.out.println("em contains member = " + em.contains(findMember));
-
-			// 테스트할 때 도움이된다.
-			em.clear();
+			em.persist(member);
+			em.persist(member2);
+			em.persist(team);
 
 			tx.commit();
 		} catch (Exception e) {
@@ -39,6 +42,5 @@ public class DetachedMain {
 			em.close();
 		}
 
-		emf.close();
 	}
 }

@@ -1,4 +1,4 @@
-package com.silverspoon.jpa.entity;
+package com.silverspoon.jpa.chapter3.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
