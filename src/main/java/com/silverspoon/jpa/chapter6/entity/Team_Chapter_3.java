@@ -11,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-import com.silverspoon.jpa.chapter3.entity.Member;
-
 @Entity
 public class Team_Chapter_3 {
 	public Team_Chapter_3() {

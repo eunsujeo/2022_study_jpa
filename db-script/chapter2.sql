@@ -1,4 +1,4 @@
-create table member
+create table memberChapter3
 (
     id   bigint not null,
     name varchar(255),

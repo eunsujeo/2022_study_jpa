@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.silverspoon.jpa.chapter3.entity.Member;
+import com.silverspoon.jpa.chapter3.entity.Member_chapter_3;
 
 public class PersistenceContextMain {
 
@@ -21,17 +21,17 @@ public class PersistenceContextMain {
 
 			//region 1차캐시
 			//비영속
-			Member member = new Member(511L, "JPA");
+			Member_chapter_3 memberChapter3 = new Member_chapter_3(511L, "JPA");
 
 			// 1차 캐시에 저장됨(영속)
-			em.persist(member);
+			em.persist(memberChapter3);
 
 			// 1차 캐시에서 조회
-			Member findMember = em.find(Member.class, 502L);
+			Member_chapter_3 findMemberChapter3 = em.find(Member_chapter_3.class, 502L);
 
 			// Database select쿼리가 나갈까?
-			System.out.println("findMember.id = " + findMember.getId());
-			System.out.println("findMember.name = " + findMember.getName());
+			System.out.println("findMember.id = " + findMemberChapter3.getId());
+			System.out.println("findMember.name = " + findMemberChapter3.getName());
 
 			// Query는 몇 번 나갈까?
 			// Member findMember1 = em.find(Member.class, 501L);

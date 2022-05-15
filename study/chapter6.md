@@ -61,10 +61,10 @@ public class Team_Chapter_3 {
 	@OneToMany(mappedBy = "team")
 	private List<Member_Chapter_3> members = new ArrayList<>();
 
-	public void addMember(Member_Chapter_3 member) {
-		this.members.add(member);
-		if (member.getTeam() != this) {
-			member.setTeam(this);
+	public void addMember(Member_Chapter_3 memberChapter3) {
+		this.members.add(memberChapter3);
+		if (memberChapter3.getTeam() != this) {
+			memberChapter3.setTeam(this);
 		}
 	}
 

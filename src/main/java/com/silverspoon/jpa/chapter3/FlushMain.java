@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.silverspoon.jpa.chapter3.entity.Member;
+import com.silverspoon.jpa.chapter3.entity.Member_chapter_3;
 
 public class FlushMain {
 
@@ -20,8 +20,8 @@ public class FlushMain {
 		try {
 
 			//region 직접호출
-			Member member = new Member(1001L, "member1000");
-			em.persist(member);
+			Member_chapter_3 memberChapter3 = new Member_chapter_3(1001L, "member1000");
+			em.persist(memberChapter3);
 
 			// 1차 캐시가 지워지지 않는다. 쓰기 지연 SQL 저장소에 있던 등록/수정/삭제 쿼리가 데이터베이스에 반영되는 과정
 			em.flush();

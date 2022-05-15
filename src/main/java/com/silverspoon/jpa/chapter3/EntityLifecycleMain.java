@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.silverspoon.jpa.chapter3.entity.Member;
+import com.silverspoon.jpa.chapter3.entity.Member_chapter_3;
 
 public class EntityLifecycleMain {
 
@@ -20,7 +20,7 @@ public class EntityLifecycleMain {
 		try {
 
 			//비영속
-			Member member = new Member(304L, "member300");
+			Member_chapter_3 memberChapter3 = new Member_chapter_3(304L, "member300");
 
 			System.out.println("비영속 =================================================");
 			//

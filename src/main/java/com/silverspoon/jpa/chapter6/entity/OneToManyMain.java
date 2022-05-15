@@ -5,8 +5,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.silverspoon.jpa.chapter3.entity.Member;
-
 public class OneToManyMain {
 
 	public static void main(String[] args) {
