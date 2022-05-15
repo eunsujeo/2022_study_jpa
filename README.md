@@ -1,4 +1,4 @@
-#자바 ORM 표준 JPA 프로그래밍
+# 자바 ORM 표준 JPA 프로그래밍
 
 ## 목표
 책과 [인프런](https://www.inflearn.com/course/ORM-JPA-Basic#) 강좌를 참고해서 작성
