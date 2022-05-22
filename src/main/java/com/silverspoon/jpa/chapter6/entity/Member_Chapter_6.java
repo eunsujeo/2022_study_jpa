@@ -14,9 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Member_Chapter_3 {
+public class Member_Chapter_6 {
 
-	public Member_Chapter_3() {
+	public Member_Chapter_6() {
 	}
 
 	@Id
@@ -27,17 +27,17 @@ public class Member_Chapter_3 {
 
 	@ManyToOne
 	@JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
-	private Team_Chapter_3 team;
+	private Team_Chapter_6 team;
 
 	@OneToOne
 	@JoinColumn(name = "LOCKER_ID")
-	private Locker_Chapter_3 locker;
+	private Locker_Chapter_6 locker;
 
 	@ManyToMany
 	@JoinTable(name = "MEMBER_PRODUCT", joinColumns = @JoinColumn(name = "MEMBER_ID"), inverseJoinColumns = @JoinColumn(name = "PRODUCT_ID"))
-	private List<Product_Chapter_3> products = new ArrayList<>();
+	private List<Product_Chapter_6> products = new ArrayList<>();
 
-	public Member_Chapter_3(String username) {
+	public Member_Chapter_6(String username) {
 		this.username = username;
 	}
 }

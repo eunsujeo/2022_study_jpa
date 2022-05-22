@@ -22,10 +22,10 @@ public class OneToManyMain {
 
 		try {
 
-			Member_Chapter_3 member = new Member_Chapter_3("member1");
-			Member_Chapter_3 member2 = new Member_Chapter_3("member2");
+			Member_Chapter_6 member = new Member_Chapter_6("member1");
+			Member_Chapter_6 member2 = new Member_Chapter_6("member2");
 
-			Team_Chapter_3 team = new Team_Chapter_3("team1");
+			Team_Chapter_6 team = new Team_Chapter_6("team1");
 			team.getMembers().add(member);
 			team.getMembers().add(member2);
 

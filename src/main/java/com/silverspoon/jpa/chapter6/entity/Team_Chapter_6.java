@@ -12,8 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Team_Chapter_3 {
-	public Team_Chapter_3() {
+public class Team_Chapter_6 {
+	public Team_Chapter_6() {
 	}
 
 	@Id
@@ -25,7 +25,7 @@ public class Team_Chapter_3 {
 
 	@OneToMany
 	@JoinColumn(name = "TEAM_ID")
-	private List<Member_Chapter_3> members = new ArrayList<>();
+	private List<Member_Chapter_6> members = new ArrayList<>();
 
 	// public void addMember(Member_Chapter_3 member) {
 	// 	this.members.add(member);
@@ -34,11 +34,11 @@ public class Team_Chapter_3 {
 	// 	}
 	// }
 
-	public List<Member_Chapter_3> getMembers() {
+	public List<Member_Chapter_6> getMembers() {
 		return members;
 	}
 
-	public Team_Chapter_3(String teamName) {
+	public Team_Chapter_6(String teamName) {
 		this.teamName = teamName;
 	}
 }

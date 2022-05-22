@@ -10,20 +10,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Locker_Chapter_3 {
-	public Locker_Chapter_3() {
+public class Product_Chapter_6 {
+	public Product_Chapter_6() {
 	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "LOCKER_ID")
+	@Column(name = "PRODUCT_ID")
 	private Long id;
 
 	private String name;
-
-	@OneToOne(mappedBy = "locker")
-	private Member_Chapter_3 member;
 }
