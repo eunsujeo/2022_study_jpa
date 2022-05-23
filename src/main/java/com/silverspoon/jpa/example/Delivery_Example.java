@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,8 +18,7 @@ public class Delivery_Example extends BaseEntity {
 	@Column(name = "delivery_id")
 	private Long id;
 
-	@OneToOne
-	@JoinColumn(name = "order_id")
+	@OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
 	private Order_Example order;
 
 	private String city;

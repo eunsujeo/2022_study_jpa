@@ -4,10 +4,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,11 +27,11 @@ public class Order_Example extends BaseEntity {
 	@Column(name = "order_id")
 	private Long id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "member_id")
 	private Member_Example member;
 
-	@OneToMany(mappedBy = "order_item_id")
+	@OneToMany(mappedBy = "order_item_id", cascade = CascadeType.ALL)
 	private List<OrderItem_Example> orderItems = new ArrayList<>();
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -38,7 +40,8 @@ public class Order_Example extends BaseEntity {
 	@Enumerated(value = EnumType.STRING)
 	private OrderStatus status;
 
-	@OneToOne(mappedBy = "delivery_id")
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "delivery_id")
 	private Delivery_Example delivery;
 
 	public Long getId() {
